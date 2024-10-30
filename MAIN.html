@@ -26,7 +26,7 @@
         </a> 
       </p>      
     </div>
-    <img src="testpic.png" alt="Person with laptop" class="person_pic">
+    <img src="PIC/testpic.png" alt="Person with laptop" class="person_pic">
   </section>
 
   <!-- Project Section -->
@@ -38,28 +38,44 @@
         <i class="project-icon">📁</i>
         <h3>AI in Pathology</h3>
         <p>Enhanced IHC testing by integrating Whole Slide Imaging (WSI) with AI tools (StarDist, YOLOv8) for cell detection and germinal center segmentation.</p>
-        <span class="project-tag">Python</span>
+        <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Machine Learning</span>
+        </div>
+        
       </div>
 
       <div class="project-card" onclick="openPopup('popup2')">
         <i class="project-icon">📁</i>
-        <h3>Detect-AI-Generated-Text-with-LLM</h3>
-        <p>Enhanced IHC testing by integrating Whole Slide Imaging (WSI) with AI tools (StarDist, YOLOv8) for cell detection and germinal center segmentation.</p>
-        <span class="project-tag">Python</span>
+        <h3>Detect AI Text LLM</h3>
+        <p>This project focuses on developing an advanced model to detect AI-generated text, aiming to distinguish it from human-written content.</p>
+        <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">LLM</span>
+        </div>
+        
       </div>
 
-      <div class="project-card" onclick="openPopup('popup2')">
+      <div class="project-card" onclick="openPopup('popup3')">
         <i class="project-icon">📁</i>
-        <h3>Detect-AI-Generated-Text-with-LLM</h3>
-        <p>Enhanced IHC testing by integrating Whole Slide Imaging (WSI) with AI tools (StarDist, YOLOv8) for cell detection and germinal center segmentation.</p>
-        <span class="project-tag">Python</span>
+        <h3>Personal Webpage</h3>
+        <p>Protfolio of some project that has been done in the past.</p>
+        <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+        </div>
       </div>
 
-      <div class="project-card" onclick="openPopup('popup2')">
+      <div class="project-card" onclick="openPopup('popup4')">
         <i class="project-icon">📁</i>
-        <h3>Detect-AI-Generated-Text-with-LLM</h3>
-        <p>Enhanced IHC testing by integrating Whole Slide Imaging (WSI) with AI tools (StarDist, YOLOv8) for cell detection and germinal center segmentation.</p>
-        <span class="project-tag">Python</span>
+        <h3>Streaming IoT data ingestion</h3>
+        <p>Data ingestion constitutes a crucial step in processing
+            and analyzing extensive volumes of data. </p>
+        <div class="project-tags">
+            <span class="project-tag">Kafka</span>
+            <span class="project-tag">MongoDB</span>
+        </div>
       </div>
       
     </div>
@@ -69,7 +85,7 @@
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup1')">&times;</span>
         <h3>AI in Pathology</h3>
-        <img src="IHC_img.png" alt="Pathology" class="IHC_pic">
+        <img src="PIC/IHC_img.png" alt="Pathology" class="IHC_pic">
         <p>Results showed significant improvements in reproducibility and reliability, setting new benchmarks for IHC quality. Future work will expand these AI models for broader IHC markers and validation across institutions. For more <a href="https://docs.google.com/document/d/1x2lm20ZjMMtAb--pVggpJhscvjDhRAloaSd2iszGDXI/edit?usp=sharing" target="_blank">info</a>.</p>
       </div>
     </div>
@@ -77,11 +93,57 @@
     <div id="popup2" class="popup-modal">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup2')">&times;</span>
-        <h3>Detect-AI-Generated-Text-with-LLM</h3>
-        <img src="IHC_img.png" alt="Pathology" class="IHC_pic">
-        <p>Details about the project...</p>
+        <h3>Detect AI Text LLM</h3>
+        <p>By building upon SeqXGPT, the model integrates RoBERTa and additional layers for enhanced feature extraction and contextual analysis. This approach achieved a high detection accuracy of 99.1%,</p>
+        <p>More detail on this project: 
+            <a href="Project/Detect-AI-Generated-Text-with-LLM.pdf" target="_blank">
+                Report
+            </a>
+            and Git
+            <a href="https://github.com/Stevenn2333/Detect-AI-Generated-Text-with-LLM" target="_blank">
+                <img src="PIC/Git.png" alt="Github" class="inline-image">
+            </a>
+        </p>
       </div>
     </div>
+
+    <div id="popup3" class="popup-modal">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('popup3')">&times;</span>
+          <h3>You’re Already Here!</h3>
+          <img src="PIC/Per_Webpage.png" alt="Pathology" class="web_pic">
+          <p>Explore, click around, and get a feel for my works!</p>
+          <p>Source code: 
+            <a href="https://github.com/Stevenn2333/PersonalWeb" target="_blank">
+            <img src="PIC/Git.png" alt="Github" class="inline-image">
+        </a></p>
+        </div>
+    </div>
+
+    <div id="popup4" class="popup-modal">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup('popup4')">&times;</span>
+          <h3>Big data pipeline</h3>
+            <p> Employed Apache NiFi and Apache Kafka to devise a data ingestion pipeline, transferring data
+            from its origin to a designated output destination like a database or
+            data lake, and a data management system using lakeFS.
+            </p>
+            <p>More detail on this project: 
+                <a href="Project/Real-Time Ingestion of Big Data and Machine Learning.pdf" target="_blank">
+                    Report
+                </a>
+                and 
+                <a href="Project/QSC-Research-Poster.pdf" target="_blank">
+                    Poster
+                </a>
+            </p>
+        </div>
+    </div>
+
+
+
+
+
   </section>
 
   <!-- Skills Section -->

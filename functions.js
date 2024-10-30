@@ -31,4 +31,16 @@ function openPopup(popupId) {
 function closePopup(popupId) {
     document.getElementById(popupId).style.display = "none";
   }
+
+  document.addEventListener('click', function(event) {
+    const popups = document.querySelectorAll('.popup-modal');
+  
+    popups.forEach(popupModal => {
+      const popupContent = popupModal.querySelector('.popup-content');
+  
+      if (popupModal.style.display === 'flex' && !popupContent.contains(event.target) && popupModal.contains(event.target)) {
+        popupModal.style.display = 'none'; 
+      }
+    });
+  });
   
