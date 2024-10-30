@@ -1,18 +1,29 @@
+/* General body styling */
 body {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center; /* Center sections horizontally */
   margin: 0;
-  padding: 0;
+  padding: 20px;
   box-sizing: border-box;
 }
 
+/* Section Container Styling */
+section {
+  width: 100%;
+  max-width: 1200px; /* Limit width for better readability */
+  margin-bottom: 40px; /* Space between sections */
+}
+
+/* Intro Section */
 .intro {
   display: flex;
   align-items: center;
   gap: 20px;
-  max-width: 600px; /* Limit the width for a centered layout */
-  margin-top: 10px; /* Optional: adds space from the top of the page */
+  max-width: 900px; /* Limit the width for a centered layout */
+  margin: 0 auto; /* Center within the page */
+  padding: 20px;
+  text-align: left;
 }
 
 .intro_text {
@@ -22,76 +33,112 @@ body {
 
 .person_pic {
   width: 150px; 
-  height: auto;
+  height: auto;          
 }
 
+/* Chat Button */
 .chat-button {
   padding: 10px 20px;
-  background-color: #0073e6; /* Customize button color */
+  background-color: #0073e6;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
   border: none;
-  border-radius: 25px; /* Rounded, chat-style look */
+  border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
-}
-
-/* CSS */
-.chat-button  {
-  align-items: center;
-  background-color: #0A66C2;
-  border: 0;
-  border-radius: 100px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
   display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
+  align-items: center;
   justify-content: center;
-  line-height: 12px;
-  max-width: 480px;
-  min-height: 40px;
-  min-width: 0px;
-  overflow: hidden;
-  padding: 0px;
-  padding-left: 12px;
-  padding-right: 12px;
+}
+
+/* Project Section */
+.project {
+  max-width: 900px;
+  padding: 20px;
+}
+
+.project h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive layout */
+  gap: 20px;
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Popup Modal */
+.popup-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
-  touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
+  position: relative;
+}
+.popup-content img {
+  width: 100%;
+  max-width: 300px; 
+  height: auto; 
+  margin-top: 10px;
+  border-radius: 8px; 
 }
 
-.chat-button :hover,
-.chat-button :focus { 
-  background-color: #16437E;
-  color: #ffffff;
-}
-
-.chat-button :active {
-  background: #09223b;
-  color: rgb(255, 255, 255, .7);
-}
-
-.chat-button :disabled { 
-  cursor: not-allowed;
-  background: rgba(0, 0, 0, .08);
-  color: rgba(0, 0, 0, .3);
-}
-
-.highlight {
+.popup-content .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
   font-weight: bold;
-  color: #222;
 }
 
-/* Category tabs */
+/* Skills Section */
+.skills {
+  max-width: 900px;
+  padding: 20px;
+}
+
+.skills h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
 .skills-categories {
   display: flex;
   gap: 20px;
@@ -110,17 +157,13 @@ body {
   border-bottom: 2px solid #000;
 }
 
-/* Skills Grid */
 .skills-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted for responsiveness */
 }
 
 .skill-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   padding: 10px 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -128,8 +171,6 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-size: 16px;
   color: #333;
+  text-align: center;
 }
 
-.skill-box .icon {
-  font-size: 18px;
-}

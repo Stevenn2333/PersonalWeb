@@ -6,61 +6,129 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header class="header">
-    <h1>Portfolio</h1>
-    <div class="intro">    
-        <div class="intro_text">
-          <h2>Hello, I'm Yifan (Steven) Wen.</h2>
-          <p>I'm a <span class="highlight">Data Analyst</span> with a strong background in computer science and hands-on experience in machine learning and AI-driven solutions.</p>
-          <p>With a Master’s in Computer Science from McGill University, I specialize in data analysis, enhancing testing accuracy and optimizing data processing pipelines.</p>
-          <p>I’m passionate about leveraging data to drive meaningful insights and improve decision-making, having worked on projects from digital pathology AI applications to real-time data ingestion pipelines.</p>
-          <p>You can chat with me though  
-            <a href="https://www.linkedin.com/in/yifan-wen-94090a169/" target="_blank" class="chat-button">
-            LinkedIn
-            </a> 
-            </p>      
-        </div>
-        <img src="testpic.png" alt="Person with laptop" class="person_pic">
 
-    </div>
-      
-  
-    <!-- Skills Section -->
-    <section class="skills">
-        <h2>Skills</h2>
-        <div class="skills-categories">
-          <span class="category active" data-category="software">Software</span>
-          <span class="category" data-category="expertise">Expertise</span>
-          <span class="category" data-category="language">Language</span>
-        </div>
-      
-        <div class="skills-grid">
-          <div class="skill-box" data-category="software">
-            </i> Figma
-          </div>
-          <div class="skill-box" data-category="software">
-            </i> Webflow
-          </div>
-          <div class="skill-box" data-category="expertise" style="display: none;">
-            <i class="icon">🔍</i> Data Analysis
-          </div>
-          <div class="skill-box" data-category="expertise" style="display: none;">
-            <i class="icon">📈</i> Machine Learning
-          </div>
-          <div class="skill-box" data-category="expertise" style="display: none;">
-            <i class="icon">🧩</i> Problem Solving
-          </div>
-          <div class="skill-box" data-category="language" style="display: none;">
-            <i class="icon">🇬🇧</i> English
-          </div>
-          <div class="skill-box" data-category="language" style="display: none;">
-            <i class="icon">🇨🇳</i> Chinese
-          </div>
-        </div>
-      </section>
-      <script src="functions.js"></script>
-      
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Portfolio</h1>
   </header>
+
+  <!-- Intro Section -->
+  <section class="intro">    
+    <div class="intro_text">
+      <h2>Hello, I'm Yifan (Steven) Wen.</h2>
+      <p>I'm a <span class="highlight">Data Analyst</span> with a strong background in computer science and hands-on experience in machine learning and AI-driven solutions.</p>
+      <p>With a Master’s in Computer Science from McGill University, I specialize in data analysis, enhancing testing accuracy and optimizing data processing pipelines.</p>
+      <p>I’m passionate about leveraging data to drive meaningful insights and improve decision-making, having worked on projects from digital pathology AI applications to real-time data ingestion pipelines.</p>
+      <p>We can connect through  
+        <a href="https://www.linkedin.com/in/yifan-wen-94090a169/" target="_blank" class="chat-button">
+        LinkedIn
+        </a> 
+      </p>      
+    </div>
+    <img src="testpic.png" alt="Person with laptop" class="person_pic">
+  </section>
+
+  <!-- Project Section -->
+  <section class="project">
+    <h2>Projects</h2>
+    <div class="project-container">
+      <!-- Project Cards -->
+      <div class="project-card" onclick="openPopup('popup1')">
+        <i class="project-icon">📁</i>
+        <h3>AI in Pathology</h3>
+        <p>Enhanced IHC testing by integrating Whole Slide Imaging (WSI) with AI tools (StarDist, YOLOv8) for cell detection and germinal center segmentation.</p>
+        <span class="project-tag">Python</span>
+      </div>
+
+      <div class="project-card" onclick="openPopup('popup2')">
+        <i class="project-icon">📁</i>
+        <h3>Detect-AI-Generated-Text-with-LLM</h3>
+        <p>Enhanced IHC testing by integrating Whole Slide Imaging (WSI) with AI tools (StarDist, YOLOv8) for cell detection and germinal center segmentation.</p>
+        <span class="project-tag">Python</span>
+      </div>
+
+      <div class="project-card" onclick="openPopup('popup2')">
+        <i class="project-icon">📁</i>
+        <h3>Detect-AI-Generated-Text-with-LLM</h3>
+        <p>Enhanced IHC testing by integrating Whole Slide Imaging (WSI) with AI tools (StarDist, YOLOv8) for cell detection and germinal center segmentation.</p>
+        <span class="project-tag">Python</span>
+      </div>
+
+      <div class="project-card" onclick="openPopup('popup2')">
+        <i class="project-icon">📁</i>
+        <h3>Detect-AI-Generated-Text-with-LLM</h3>
+        <p>Enhanced IHC testing by integrating Whole Slide Imaging (WSI) with AI tools (StarDist, YOLOv8) for cell detection and germinal center segmentation.</p>
+        <span class="project-tag">Python</span>
+      </div>
+      
+    </div>
+
+    <!-- Popup Modals -->
+    <div id="popup1" class="popup-modal">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <h3>AI in Pathology</h3>
+        <img src="IHC_img.png" alt="Pathology" class="IHC_pic">
+        <p>Results showed significant improvements in reproducibility and reliability, setting new benchmarks for IHC quality. Future work will expand these AI models for broader IHC markers and validation across institutions. For more <a href="https://docs.google.com/document/d/1x2lm20ZjMMtAb--pVggpJhscvjDhRAloaSd2iszGDXI/edit?usp=sharing" target="_blank">info</a>.</p>
+      </div>
+    </div>
+
+    <div id="popup2" class="popup-modal">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <h3>Detect-AI-Generated-Text-with-LLM</h3>
+        <img src="IHC_img.png" alt="Pathology" class="IHC_pic">
+        <p>Details about the project...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-categories">
+      <span class="category active" data-category="language">Language</span>
+      <span class="category" data-category="expertise">Expertise</span>
+      <span class="category" data-category="software">Software</span>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Skill Boxes -->
+      <div class="skill-box" data-category="software" style="display: none;">
+        Figma
+      </div>
+      <div class="skill-box" data-category="software" style="display: none;">
+        Webflow
+      </div>
+      <div class="skill-box" data-category="language">
+        Python
+      </div>
+      <div class="skill-box" data-category="language">
+        Java
+      </div>
+      <div class="skill-box" data-category="language">
+        SQL
+      </div>
+      <div class="skill-box" data-category="language">
+        HTML
+      </div>
+      <div class="skill-box" data-category="language">
+        MATLAB
+      </div>
+      <div class="skill-box" data-category="expertise" style="display: none;">
+        <i class="icon">🔍</i> Data Analysis
+      </div>
+      <div class="skill-box" data-category="expertise" style="display: none;">
+        <i class="icon">📈</i> Machine Learning
+      </div>
+      <div class="skill-box" data-category="expertise" style="display: none;">
+        <i class="icon">🧩</i> Problem Solving
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="functions.js"></script>
 </body>
 </html>
