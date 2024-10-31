@@ -1,13 +1,15 @@
 /* Header Styling */
 .header {
   position: absolute; 
-  width: 100%;
+  width: 100%; /* Full viewport width to prevent overflow */
   top: 0; 
   left: 0; 
   background-color: #f5f5f5; 
   border-bottom: 2px solid #000; 
   padding: 30px 40px; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Includes padding within the width */
+  overflow-x: hidden; /* Prevents any horizontal scroll within the header */
 }
 
 /* Navigation Menu */
@@ -42,8 +44,6 @@
 
 
 
-
-
 /* General body styling */
 body {
   display: flex;
@@ -53,14 +53,15 @@ body {
   padding: 20px;
   box-sizing: border-box;
   background-color: #f5f5f4;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 
 /* Section Container Styling */
 section {
   width: 100%;
   max-width: 1200px; 
-  margin-bottom: 40px; 
+  margin-bottom: 20px;
+
 }
 
 /* Intro Section */
@@ -72,11 +73,28 @@ section {
   margin: 0 auto; 
   padding: 20px;
   text-align: left;
+  
 }
 
 .intro_text {
   flex: 1; 
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.intro h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.intro_text p {
+  margin-bottom: 20px; 
+}
+
+.highlight {
+  color: #0e0e0e;
+  font-weight: bold;
 }
 
 .person_pic {
@@ -89,7 +107,7 @@ section {
   padding: 10px 20px;
   background-color: #0073e6;
   color: #fff;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   text-decoration: none;
   border: none;
@@ -109,8 +127,8 @@ section {
 }
 
 .projects h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 .project-container {
@@ -186,15 +204,16 @@ section {
   padding: 30px 20px;
   border-radius: 8px;
   width: 80%;
-  max-width: 500px;
+  max-width: 900px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
+  font-size: 20px;
 }
 
 .popup-content img {
   width: 100%;
-  max-width: 300px; 
+  max-width: 500px; 
   height: auto; 
   margin-top: 10px;
   border-radius: 8px;
@@ -203,7 +222,7 @@ section {
 }
 
 .popup-content .pro_pic.zoomed {
-  transform: scale(4.5); 
+  transform: scale(2.5); 
   z-index: 10; 
 }
 
@@ -232,8 +251,8 @@ section {
 }
 
 .skills h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 .skills-categories {
@@ -270,4 +289,56 @@ section {
   color: #333;
   text-align: center;
 }
+
+.back-to-top {
+  --offset: 50px;
+
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  
+  text-decoration: none;
+  padding: 20px 25px;
+  font-family: sans-serif;
+  color: #000000;
+  background: #fdf7f7;
+  border-radius: 100px;
+  white-space: nowrap;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none; 
+  transition: opacity 0.3s ease;
+}
+
+/* Show the button when it’s visible */
+.back-to-top.show {
+  display: block;
+}
+
+
+.divider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.divider {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #4a4242;
+  top: 0;
+}
+
+
+.watermark-footer {
+  width: 100%; 
+  text-align: center; 
+  padding: 10px 0; 
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5); 
+  position: relative;
+  margin-top: 40px; 
+}
+
 

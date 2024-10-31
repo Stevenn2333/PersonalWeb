@@ -25,17 +25,31 @@
   <section id="intro" class="intro">   
      <div class="intro_text">
       <h2>Hello, I'm Yifan (Steven) Wen.</h2>
-      <p>I'm a <span class="highlight">Data Analyst</span> with a strong background in computer science and hands-on experience in machine learning and AI-driven solutions.</p>
-      <p>With a Master’s in Computer Science from McGill University, I specialize in data analysis, enhancing testing accuracy and optimizing data processing pipelines.</p>
-      <p>I’m passionate about leveraging data to drive meaningful insights and improve decision-making, having worked on projects from digital pathology AI applications to real-time data ingestion pipelines.</p>
+      <p>
+        I'm a <span class="highlight">Data Analyst</span> with a solid foundation in <span class="highlight">computer science</span> and extensive experience in <span class="highlight">machine learning</span> and <span class="highlight">AI-driven solutions</span>.  
+      </p>
+      <p>
+        With a <span class="highlight">Master’s in Computer Science</span> from McGill University,  
+        I specialize in transforming <span class="highlight">raw data</span> into <span class="highlight">valuable insights</span>, optimizing decision-making processesacross various domains.
+      </p>
+      <p> 
+        My project work spans from <span class="highlight">AI-enhanced</span> digital pathology to scalable <span class="highlight">IoT data </span>ingestion pipelines, showcasing my passion for innovative, data-powered problem-solving. Each project reflects my commitment to leveraging data for impactful, actionable insights.
+      </p>
       <p>We can connect through  
         <a href="https://www.linkedin.com/in/yifan-wen-94090a169/" target="_blank" class="chat-button">
         LinkedIn
         </a>
+        .
       </p>      
     </div>
     <img src="PIC/testpic.png" alt="Person with laptop" class="person_pic"> 
   </section>
+
+  
+  <div class="divider-wrapper">
+    <div class="divider"></div>
+  </div>
+  
 
   <!-- Project Section -->
   <section id="projects" class="projects">
@@ -94,6 +108,17 @@
             <span class="project-tag">SQL</span>
             <span class="project-tag">PHP</span>
             <span class="project-tag">HTML</span>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openPopup('popup6')">
+        <i class="project-icon">📁</i>
+        <h3>Business Analysis</h3>
+        <p>Analytical tool tailored for small and medium-sized banks, enabling them to effectively compete with national banks by identifying high-potential customers for targeted marketing.</p>
+        <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">AWS</span>
+            <span class="project-tag">Unsupervised Learning</span>
         </div>
       </div>
       
@@ -175,10 +200,29 @@
         </p>
       </div>
     </div>
+
+    <div id="popup6" class="popup-modal">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup6')">&times;</span>
+        <h3>Kawartha Credit Union</h3>
+        <img src="PIC/Bank.png" alt="bank" class="pro_pic">
+        <p>To help small and medium-sized banks overcome budget constraints in marketing, the Marketing Success Identifier leverages K-means clustering for customer segmentation. By applying K-means clustering to customer data, this tool groups individuals with similar characteristics, highlighting segments with a high likelihood of subscribing to term deposits. </p>
+        <p>Project Overview: 
+          <a href="https://github.com/Stevenn2333/Kawartha-Credit-Union-Market-Unsupervised/blob/main/K%20Means%20Clustering%20-%20Assignment%20Group9%20-%20ModelMavens.ipynb" target="_blank">
+            <img src="PIC/Git.png" alt="Github" class="inline-image">
+          </a>
+        </p>
+      </div>
+    </div>
     
     </div>
 
   </section>
+
+
+  <div class="divider-wrapper">
+    <div class="divider"></div>
+  </div>
 
   <!-- Skills Section -->
   <section id='skills' class="skills">
@@ -207,6 +251,15 @@
         Python
       </div>
       <div class="skill-box" data-category="language">
+        Python-Sklearn
+      </div>
+      <div class="skill-box" data-category="language">
+        Python-PyTorch
+      </div>
+      <div class="skill-box" data-category="language">
+        Python-Panada
+      </div>
+      <div class="skill-box" data-category="language">
         Java
       </div>
       <div class="skill-box" data-category="language">
@@ -225,10 +278,21 @@
         Machine Learning
       </div>
       <div class="skill-box" data-category="expertise" style="display: none;">
+        Deep Learning
+      </div>
+      <div class="skill-box" data-category="expertise" style="display: none;">
         Problem Solving
       </div>
     </div>
   </section>
+
+  <footer class="watermark-footer fixed">
+    © 2024 Yifan Wen. 
+  </footer>
+  
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">↑ Back to the Top</button>
 
   <!-- JavaScript -->
   <script src="functions.js"></script>

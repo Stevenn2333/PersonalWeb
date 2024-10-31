@@ -80,4 +80,20 @@ document.addEventListener('click', function(event) {
     });
   });
   
+  window.addEventListener('scroll', () => {
+    const backToTopButton = document.getElementById('backToTop');
+  
+    if (window.scrollY > 100) {
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+    }
+  });
+  
+  document.getElementById('backToTop').addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
   
