@@ -3,19 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Steven Wen</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Header Section -->
   <header class="header">
-    <h1>Portfolio</h1>
+    <nav class="nav-menu">
+      <ul class="menu">
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="Project/Yifan_Wen.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
   </header>
 
+
   <!-- Intro Section -->
-  <section class="intro">    
-    <div class="intro_text">
+  <section id="intro" class="intro">   
+     <div class="intro_text">
       <h2>Hello, I'm Yifan (Steven) Wen.</h2>
       <p>I'm a <span class="highlight">Data Analyst</span> with a strong background in computer science and hands-on experience in machine learning and AI-driven solutions.</p>
       <p>With a Master’s in Computer Science from McGill University, I specialize in data analysis, enhancing testing accuracy and optimizing data processing pipelines.</p>
@@ -23,14 +31,14 @@
       <p>We can connect through  
         <a href="https://www.linkedin.com/in/yifan-wen-94090a169/" target="_blank" class="chat-button">
         LinkedIn
-        </a> 
+        </a>
       </p>      
     </div>
-    <img src="PIC/testpic.png" alt="Person with laptop" class="person_pic">
+    <img src="PIC/testpic.png" alt="Person with laptop" class="person_pic"> 
   </section>
 
   <!-- Project Section -->
-  <section class="project">
+  <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-container">
       <!-- Project Cards -->
@@ -70,11 +78,22 @@
       <div class="project-card" onclick="openPopup('popup4')">
         <i class="project-icon">📁</i>
         <h3>Streaming IoT data ingestion</h3>
-        <p>Data ingestion constitutes a crucial step in processing
-            and analyzing extensive volumes of data. </p>
+        <p>This project develops a scalable, real-time data ingestion pipeline </p>
         <div class="project-tags">
             <span class="project-tag">Kafka</span>
             <span class="project-tag">MongoDB</span>
+        </div>
+      </div>
+
+
+      <div class="project-card" onclick="openPopup('popup5')">
+        <i class="project-icon">📁</i>
+        <h3>Restaurant Database</h3>
+        <p>A web-based interface for restaurant data.</p>
+        <div class="project-tags">
+            <span class="project-tag">SQL</span>
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">HTML</span>
         </div>
       </div>
       
@@ -85,8 +104,10 @@
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup1')">&times;</span>
         <h3>AI in Pathology</h3>
-        <img src="PIC/IHC_img.png" alt="Pathology" class="IHC_pic">
-        <p>Results showed significant improvements in reproducibility and reliability, setting new benchmarks for IHC quality. Future work will expand these AI models for broader IHC markers and validation across institutions. For more <a href="https://docs.google.com/document/d/1x2lm20ZjMMtAb--pVggpJhscvjDhRAloaSd2iszGDXI/edit?usp=sharing" target="_blank">info</a>.</p>
+        <img src="PIC/IHC_img.png" alt="Pathology" class="pro_pic">
+        <p>Results showed significant improvements in reproducibility and reliability, setting new benchmarks for IHC quality. 
+          Future work will expand these AI models for broader IHC markers and validation across institutions. </p>
+          <p>For more <a href="https://docs.google.com/document/d/1x2lm20ZjMMtAb--pVggpJhscvjDhRAloaSd2iszGDXI/edit?usp=sharing" target="_blank">info</a>.</p>
       </div>
     </div>
 
@@ -111,7 +132,7 @@
         <div class="popup-content">
           <span class="close" onclick="closePopup('popup3')">&times;</span>
           <h3>You’re Already Here!</h3>
-          <img src="PIC/Per_Webpage.png" alt="Pathology" class="web_pic">
+          <img src="PIC/Per_Webpage.png" alt="Pathology" class="pro_pic">
           <p>Explore, click around, and get a feel for my works!</p>
           <p>Source code: 
             <a href="https://github.com/Stevenn2333/PersonalWeb" target="_blank">
@@ -124,6 +145,7 @@
         <div class="popup-content">
           <span class="close" onclick="closePopup('popup4')">&times;</span>
           <h3>Big data pipeline</h3>
+          <img src="PIC/datapipeline.png" alt="Data_p" class="pro_pic">
             <p> Employed Apache NiFi and Apache Kafka to devise a data ingestion pipeline, transferring data
             from its origin to a designated output destination like a database or
             data lake, and a data management system using lakeFS.
@@ -138,16 +160,28 @@
                 </a>
             </p>
         </div>
+      </div>
+
+    <div id="popup5" class="popup-modal">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup5')">&times;</span>
+        <h3>Restaurant Data</h3>
+        <img src="PIC/Res_Data.png" alt="Restaurant" class="pro_pic">
+        <p>A full functional web-based project let user add order and other interactions with the database.</p>
+        <p>Source code: 
+          <a href="https://github.com/Stevenn2333/Restaurant-Database-Web?tab=readme-ov-file" target="_blank">
+            <img src="PIC/Git.png" alt="Github" class="inline-image">
+          </a>
+        </p>
+      </div>
     </div>
-
-
-
-
+    
+    </div>
 
   </section>
 
   <!-- Skills Section -->
-  <section class="skills">
+  <section id='skills' class="skills">
     <h2>Skills</h2>
     <div class="skills-categories">
       <span class="category active" data-category="language">Language</span>
@@ -158,10 +192,16 @@
     <div class="skills-grid">
       <!-- Skill Boxes -->
       <div class="skill-box" data-category="software" style="display: none;">
-        Figma
+        GitHub
       </div>
       <div class="skill-box" data-category="software" style="display: none;">
-        Webflow
+        VS Code
+      </div>
+      <div class="skill-box" data-category="software" style="display: none;">
+        Linux
+      </div>
+      <div class="skill-box" data-category="software" style="display: none;">
+        MATLAB
       </div>
       <div class="skill-box" data-category="language">
         Python
@@ -179,13 +219,13 @@
         MATLAB
       </div>
       <div class="skill-box" data-category="expertise" style="display: none;">
-        <i class="icon">🔍</i> Data Analysis
+        Data Analysis
       </div>
       <div class="skill-box" data-category="expertise" style="display: none;">
-        <i class="icon">📈</i> Machine Learning
+        Machine Learning
       </div>
       <div class="skill-box" data-category="expertise" style="display: none;">
-        <i class="icon">🧩</i> Problem Solving
+        Problem Solving
       </div>
     </div>
   </section>

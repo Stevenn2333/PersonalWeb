@@ -1,19 +1,66 @@
+/* Header Styling */
+.header {
+  position: absolute; 
+  width: 100%;
+  top: 0; 
+  left: 0; 
+  background-color: #f5f5f5; 
+  border-bottom: 2px solid #000; 
+  padding: 30px 40px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* Menu Items */
+.menu {
+  display: flex;
+  gap: 40px; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #f5f5f4;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
 /* General body styling */
 body {
   display: flex;
-  flex-direction: column; /* Stack sections vertically */
-  align-items: center; /* Center sections horizontally */
+  flex-direction: column; 
+  align-items: center;
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #F5F5F4;
+  background-color: #f5f5f4;
+  padding-top: 200px;
 }
 
 /* Section Container Styling */
 section {
   width: 100%;
-  max-width: 1200px; /* Limit width for better readability */
-  margin-bottom: 40px; /* Space between sections */
+  max-width: 1200px; 
+  margin-bottom: 40px; 
 }
 
 /* Intro Section */
@@ -21,8 +68,8 @@ section {
   display: flex;
   align-items: center;
   gap: 20px;
-  max-width: 900px; /* Limit the width for a centered layout */
-  margin: 0 auto; /* Center within the page */
+  max-width: 900px; 
+  margin: 0 auto; 
   padding: 20px;
   text-align: left;
 }
@@ -33,7 +80,7 @@ section {
 }
 
 .person_pic {
-  width: 150px; 
+  width: 300px; 
   height: auto;          
 }
 
@@ -56,19 +103,19 @@ section {
 }
 
 /* Project Section */
-.project {
+.projects {
   max-width: 900px;
   padding: 20px;
 }
 
-.project h2 {
+.projects h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   gap: 20px;
 }
 
@@ -87,8 +134,8 @@ section {
   flex-direction: column;
 }
 .project-card h3 {
-  margin-bottom: 2px; /* Reduces space below the header */
-  font-size: 18px; /* Adjust font size as needed */
+  margin-bottom: 2px; 
+  font-size: 18px; 
   font-weight: bold;
 }
 .project-card:hover {
@@ -144,13 +191,22 @@ section {
   text-align: center;
   position: relative;
 }
+
 .popup-content img {
   width: 100%;
   max-width: 300px; 
   height: auto; 
   margin-top: 10px;
-  border-radius: 8px; 
+  border-radius: 8px;
+  transition: transform 0.3s ease; 
+  cursor: pointer;
 }
+
+.popup-content .pro_pic.zoomed {
+  transform: scale(4.5); 
+  z-index: 10; 
+}
+
 
 .popup-content img.inline-image {
   width: 2em; 
@@ -201,7 +257,7 @@ section {
 .skills-grid {
   display: grid;
   gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted for responsiveness */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
 }
 
 .skill-box {
