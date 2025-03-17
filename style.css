@@ -7,7 +7,7 @@
   background-color: #f5f5f5; 
   border-bottom: 2px solid #000; 
   padding: 30px 40px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(58, 50, 50, 0.1);
   box-sizing: border-box; /* Includes padding within the width */
   overflow-x: hidden; /* Prevents any horizontal scroll within the header */
 }
@@ -280,6 +280,7 @@ section {
 }
 
 .skill-box {
+  max-width: 200px;
   padding: 10px 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
